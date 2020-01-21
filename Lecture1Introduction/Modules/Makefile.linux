@@ -1,0 +1,17 @@
+CFLAGS+= -Wall -g 
+
+OBJECTS  :=main.o external.o module1.o
+
+MultiFile : $(OBJECTS)
+	clang++  $(OBJECTS) -o MultiFile
+
+main.o : main.cpp
+	clang++ -c $(CFLAGS) main.cpp
+
+external.o : external.cpp
+	clang++ -c $(CFLAGS) external.cpp
+
+module1.o : module1.cpp
+	clang++ -c $(CFLAGS) module1.cpp
+clean :
+	rm -f *.o MultiFile
