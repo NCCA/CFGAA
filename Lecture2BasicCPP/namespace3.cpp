@@ -25,5 +25,5 @@ int main()
 	}
 	func1();
 	func2();
-	std::cout<<"end\n";
+	cout<<"end\n";
 }
