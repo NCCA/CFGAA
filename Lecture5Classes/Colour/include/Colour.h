@@ -35,7 +35,4 @@ class Colour
     float m_a=1.0f;
 };
 
-
-
-
 #endif
