@@ -39,7 +39,7 @@ int main()
   std::cout<<"\n\n";
 
   {
-    std::cout<<"constructing Base b\n";
+    std::cout<<"constructing Derived b\n";
     Derived d(2,4);
   }
 
