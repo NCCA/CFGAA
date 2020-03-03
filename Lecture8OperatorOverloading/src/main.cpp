@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include "Vec3.h"
+#include <strstream>
 using namespace ::testing;
 
 TEST(Vec3,defaultCtor)
@@ -127,6 +128,30 @@ TEST(Vec3,divideFloat)
 
 }
 
+TEST(Vec3,negate)
+{
+  Vec3 v(1,2,3);
+  -v;
+  EXPECT_FLOAT_EQ(v.m_x,-1.0f);
+  EXPECT_FLOAT_EQ(v.m_x,-2.0f);
+  EXPECT_FLOAT_EQ(v.m_x,-3.0f);
+
+}
+
+TEST(Vec3,subscript)
+{
+  Vec3 v;
+  v[0]=2.0f;
+  v[1]=3.0f;
+  v[2]=4.0f;
+
+  EXPECT_FLOAT_EQ(v[0],2.0f);
+  EXPECT_FLOAT_EQ(v[1],3.0f);
+  EXPECT_FLOAT_EQ(v[2],4.0f);
+
+
+}
+
 TEST(Vec3,divideVec)
 {
   Vec3 a(1.0f,2.0f,3.0f);
@@ -147,4 +172,19 @@ TEST(Vec3,divideEqualVec)
   EXPECT_FLOAT_EQ(a.m_z,1.5f);
 }
 
+TEST(Vec3,insertionOperator)
+{
+  std::stringstream out;
+  Vec3 b;
+  out<<b;
+  EXPECT_EQ(out.str(),"[0,0,0]");
+}
+
+TEST(Vec3,extractionOperator)
+{
+  std::stringstream in("1 2 3");
+  Vec3 b;
+  in>>b;
+  EXPECT_TRUE(b==Vec3(1,2,3));
+}
 

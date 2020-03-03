@@ -1,0 +1,7 @@
+TEMPLATE = app
+TARGET = Qt1
+INCLUDEPATH += .
+QT+=widgets
+DEFINES += QT_DEPRECATED_WARNINGS
+SOURCES += main.cpp
+CONFIG -= app_bundle
