@@ -133,8 +133,8 @@ TEST(Vec3,negate)
   Vec3 v(1,2,3);
   -v;
   EXPECT_FLOAT_EQ(v.m_x,-1.0f);
-  EXPECT_FLOAT_EQ(v.m_x,-2.0f);
-  EXPECT_FLOAT_EQ(v.m_x,-3.0f);
+  EXPECT_FLOAT_EQ(v.m_y,-2.0f);
+  EXPECT_FLOAT_EQ(v.m_z,-3.0f);
 
 }
 
