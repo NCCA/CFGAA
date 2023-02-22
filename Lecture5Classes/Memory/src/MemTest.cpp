@@ -5,12 +5,13 @@
 
 int main()
 {
-
-  Mem a(4);
-  for (int i=0; i<4; ++i)
+  constexpr int size=4;
+  Mem a(size);
+  for (int i=0; i<size; ++i)
   {
     a.set(i,i);
   }
+
 
   Mem b=a;
   Mem c(a);

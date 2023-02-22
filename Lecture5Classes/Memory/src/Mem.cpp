@@ -2,7 +2,7 @@
 #include <iostream>
 #include <cassert>
 
-Mem::Mem( int _size )
+Mem::Mem(int _size )
 {
   std::cout<<"ctor called\n";
   // allocate a new block of memory
@@ -30,7 +30,7 @@ Mem::Mem( const Mem &_m  )
 Mem::~Mem()
 {
   std::cout<<"dtor called\n";
-  if(m_mem !=0)
+  if(m_mem !=nullptr)
   {
     delete [] m_mem;
   }
@@ -41,7 +41,7 @@ void Mem::print()
 {
   for(int i=0; i<m_size; ++i)
   {
-    std::cout<<m_mem[i]<<std::endl;
+    std::cout<<m_mem[i]<<'\n';
   }
 }
 void Mem::set( int _offset,  int _value )

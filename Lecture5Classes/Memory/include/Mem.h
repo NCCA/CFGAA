@@ -1,5 +1,5 @@
-#ifndef MEM_H__
-#define MEM_H__
+#ifndef MEM_H_
+#define MEM_H_
 
 /// @brief a class to allocate dynamic integers
 /// demonstrates the use of the destructor
@@ -11,7 +11,7 @@ class Mem
     Mem(int _size );
     /// @brief copy ctor explicitly copies the data
 		/// @param [in] _m the Mem object to copy
-		Mem( const Mem &_m );
+    Mem( const Mem &_m );
     /// @brief dtor will deallocate m_mem if allocated
 		~Mem();
     /// @param method to print out the memory
