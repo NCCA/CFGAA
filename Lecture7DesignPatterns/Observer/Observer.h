@@ -17,7 +17,7 @@ class Observer
         m_subject->attach(this);
     }
     virtual void update() = 0;
-    ~Observer() {}
+    virtual ~Observer() {}
   protected:
     std::shared_ptr<Subject> getSubject() { return m_subject;}
     int getDivisor() const { return m_denom; }

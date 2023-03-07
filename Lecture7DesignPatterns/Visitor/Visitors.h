@@ -8,6 +8,7 @@ class Element
 {
   public:
     virtual void accept(class Visitor &v) = 0;
+    virtual ~Element()=default;
 };
 
 class A: public Element
